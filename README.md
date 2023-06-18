@@ -118,7 +118,7 @@ new simpleDataTable('myTable', dataList, {
 
 Report bugs and suggest feature in [issue tracker](https://github.com/habibmhamadi/simple-datatable/issues). Feel free to `Fork` and send `Pull Requests`.
 
----*Please give a star if you like it.*---
+--- *Please give a star if you like it.* ---
 
 
 ## License
