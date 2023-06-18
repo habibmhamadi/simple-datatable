@@ -1,11 +1,4 @@
-function simpleDataTable(tableId, dataList, options = {
-    title: '',
-    searchableColumns: [],
-    itemsPerPage: 5,
-    pageSelection: [],
-    fontFamily: "",
-    onRowRender: function (data, column) { }
-}) {
+function simpleDataTable(tableId, dataList, options = {}) {
     let itemsPerPage = options.itemsPerPage || 5;
     let pageSelection = options.pageSelection || [5, 10, 20, 50, 100]
     if (!pageSelection.includes(itemsPerPage)) {
@@ -16,8 +9,6 @@ function simpleDataTable(tableId, dataList, options = {
     let sortDirection = 1; // Sort direction: 1 for ascending, -1 for descending
     let sortColumn = ""; // Column to sort
     var searchDelayTimer;
-    var parser = new DOMParser()
-
 
     const dtContainer = document.createElement('div')
     dtContainer.classList.add(...['dtContainer'])
@@ -116,18 +107,18 @@ function simpleDataTable(tableId, dataList, options = {
         if (options.hasOwnProperty('onRowRender')) {
             pageData.forEach((data) => {
                 var column = []
-                Object.keys(data).forEach(key => {
-                    column.push(`<td>${data[key]}</td>`)
-                })
+                for(let i = 0; i < oldTheads.length; i++) {
+                    column.push(`<td>${data[i]}</td>`)
+                }
                 tbody.innerHTML += `<tr>${options.onRowRender(data, column).join('')}<tr>`
             })
         }
         else {
             pageData.forEach((row) => {
                 var tr = document.createElement("tr");
-                Object.keys(row).forEach(key => {
-                    tr.innerHTML += `<td>${row[key]}</td>`
-                })
+                for(let i = 0; i < oldTheads.length; i++) {
+                    tr.innerHTML += `<td>${row[i]}</td>`
+                }
                 tbody.appendChild(tr);
             });
         }
