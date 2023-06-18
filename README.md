@@ -16,7 +16,7 @@ A simple HTML datatable built in pure Javascript.
 
 ### Basic Initialization
 
- - Give an id attribute to your select element.
+ - Give an id to your table element and add `<th>` elements as well.
 ```html
 <table id="myTable">
     <thead>
@@ -94,8 +94,11 @@ new simpleDataTable('myTable', dataList, {
 
 -- `onRowRender` has two array parameters the first one contains the data of a row and the second one contains the default rendered `<td>`s.
 ```javascript
-// console.log(data) ---> [1, "John Doe", 'Afghanistan', "john@example.com"]
-// console.log(column) ----> ['<td>1</td>', '<td>John Doe</td>', '<td>Afghanistan</td>', '<td>john@example.com</td>']
+// console.log(data)
+// [1, "John Doe", 'Afghanistan', "john@example.com"]
+
+// console.log(column)
+// ['<td>1</td>', '<td>John Doe</td>', '<td>Afghanistan</td>', '<td>john@example.com</td>']
 
 ```
 
@@ -110,9 +113,11 @@ new simpleDataTable('myTable', dataList, {
 ```
 
 
+
 ## Contribute
 
 Report bugs and suggest feature in [issue tracker](https://github.com/habibmhamadi/simple-datatable/issues). Feel free to `Fork` and send `Pull Requests`.
+***Please give a star if you like it.***
 
 
 ## License
