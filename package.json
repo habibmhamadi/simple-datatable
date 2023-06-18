@@ -1,0 +1,31 @@
+{
+  "name": "simple-datatable",
+  "version": "1.0.0",
+  "description": "A simple HTML datatable built in JavaScript.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-js": "minify src/js/simple-datatable.js > dist/js/simple-datatable.min.js",
+    "minify-css": "minify src/css/simple-datatable.css > dist/css/simple-datatable.min.css",
+    "minify": "npm run minify-js && npm run minify-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/habibmhamadi/simple-datatable.git"
+  },
+  "keywords": [
+    "datatable",
+    "data",
+    "table",
+    "simple",
+    "html"
+  ],
+  "author": "Habib Mhamadi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/habibmhamadi/simple-datatable/issues"
+  },
+  "homepage": "https://github.com/habibmhamadi/simple-datatable#readme",
+  "dependencies": {
+    "minify": "^9.1.0"
+  }
+}

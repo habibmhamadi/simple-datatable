@@ -1,0 +1,138 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.dtContainer {
+    background: white; padding:1rem; -webkit-box-shadow: 0 1px 2px rgba(56,65,74,.15); box-shadow: 0 1px 2px rgba(56,65,74,.15);
+}
+
+.dtContainer h4 {
+    margin: 0; margin-bottom: 1rem; color: #6b7280;
+}
+
+.dtContainer .headerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-top: 1px solid rgb(243, 243, 243); padding: 0.75rem 0;
+}
+
+.dtContainer .headerContainer div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+}
+
+.dtContainer .perPageSelectorDiv {
+    font-size: 14px;
+}
+
+.dtContainer select {
+    margin-left:0.75rem; padding:  0.45rem; border-radius: 0.35rem; outline: none; border: 1px solid #d9d9d9; background-color: rgb(249, 249, 249);
+}
+
+.dtContainer input {
+    padding: 0.5rem; border-radius: 0.35rem; width: 50%; outline: none; border: 1px solid #d9d9d9; background-color: rgb(249, 249, 249);
+}
+
+.dtContainer .tableContainer {
+    overflow: auto;
+}
+
+.dtContainer table {
+    border-collapse: collapse; width: 100%;
+}
+
+.dtContainer thead {
+    text-transform: uppercase; font-weight: 600; font-size: 0.75rem; line-height: 1rem; color: #8d96a5; background-color: #f5f7f8;
+}
+
+.dtContainer th {
+    font-weight: 600; padding: 0.75rem; white-space: nowrap; text-align: left;
+}
+
+.dtContainer td {
+    padding: 0.75rem; white-space: nowrap; text-align: left; font-size: 14px; padding-top: 1rem;
+}
+
+.dtContainer .paginationContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2rem;
+  }
+
+.dtContainer .paginationHelper {
+    font-size: 13px;
+    color: #6b7280;
+    margin-right: 0.5rem;
+}
+
+  .dtContainer .page,
+  .dtContainer .previous,
+  .dtContainer .next {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    background-color: white;
+    border-width: 1px;
+    color: #6b7280;
+    border: 1px solid #d1d5dbe5;
+    margin-right: -1px;
+    cursor: pointer;
+    line-height: 1.25;
+  }
+
+  .dtContainer .next {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .dtContainer .previous {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .dtContainer .next:disabled, .dtContainer .previous:disabled {
+    background-color: #f7f7f7;
+    color: #b7b7b7;
+    cursor: auto;
+  }
+
+  .dtContainer .next:disabled:hover, .dtContainer .previous:disabled:hover {
+    background-color: #f7f7f7;
+    color: #b7b7b7;
+  }
+
+  .dtContainer .page.active {
+      font-weight: bold;
+  }
+
+  .dtContainer .page:hover,
+  .dtContainer .previous:hover,
+  .dtContainer .next:hover {
+    background-color: #eaeaea;
+  }
+
+  .dtContainer .sortable div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+  }
+
+  .dtContainer svg {
+    width: 0.8rem;
+    cursor: pointer;
+  }
+
+  .dtContainer .sortable span {
+    margin-right: 5px;
+  }
