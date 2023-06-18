@@ -63,7 +63,7 @@ new simpleDataTable('myTable', dataList, {
 
 ### Custom Columns
 
--- You can add custom columns or customize each column data by overriding `onRowRender` function in options.
+- You can add custom columns or customize each column data by overriding `onRowRender` function in options.
 
 ```html
 <table id="myTable">
@@ -92,7 +92,7 @@ new simpleDataTable('myTable', dataList, {
 ```
 <img src="https://firebasestorage.googleapis.com/v0/b/flutterapp-5c015.appspot.com/o/demo_images%2Fsimple-datatable2.JPG?alt=media&token=4ce2c976-5571-45c5-b648-1896380e88b6" style="width:70%" alt="Simple Datatable 2" />
 
--- `onRowRender` has two array parameters the first one contains the data of a row and the second one contains the default rendered `<td>`s.
+- `onRowRender` has two array parameters the first one contains the data of a row and the second one contains the default rendered `<td>`s.
 ```javascript
 // console.log(data)
 // [1, "John Doe", 'Afghanistan', "john@example.com"]
@@ -104,7 +104,7 @@ new simpleDataTable('myTable', dataList, {
 
 
 ### Enable Sorting
--- To enable column sorting add `sortable` class on desired `<th>` element.
+- To enable column sorting add `sortable` class on desired `<th>` element.
 ```html
     <thead>
         <tr>
@@ -117,7 +117,8 @@ new simpleDataTable('myTable', dataList, {
 ## Contribute
 
 Report bugs and suggest feature in [issue tracker](https://github.com/habibmhamadi/simple-datatable/issues). Feel free to `Fork` and send `Pull Requests`.
-***Please give a star if you like it.***
+
+*Please give a star if you like it.*
 
 
 ## License
