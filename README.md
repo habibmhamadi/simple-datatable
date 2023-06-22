@@ -59,6 +59,7 @@ new simpleDataTable('myTable', dataList, {
     itemsPerPage: 5,
     pageSelection: [5, 10, 20, 50, 100], // Selection of items per page
     fontFamily: 'arial',
+    height: '17rem' // Default
 })
 ```
 

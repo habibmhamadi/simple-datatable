@@ -52,6 +52,7 @@ function simpleDataTable(tableId, dataList, options = {}) {
 
     const tableContainer = document.createElement('div')
     tableContainer.classList.add(...['tableContainer'])
+    tableContainer.style.height = options.height || '17rem'
     const newTable = document.createElement('table')
     const thead = document.createElement('thead')
     const thTr = document.createElement('tr')
