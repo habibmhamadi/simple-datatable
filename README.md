@@ -1,7 +1,7 @@
 # simple-datatable
 A simple HTML datatable built in pure Javascript.
 
-<img src="https://firebasestorage.googleapis.com/v0/b/flutterapp-5c015.appspot.com/o/demo_images%2Fsimple-datatable.JPG?alt=media&token=1bb2ddec-29a4-473b-b60f-e611c5fd2725" style="width:100%" alt="Simple Datatable" />
+<img src="https://firebasestorage.googleapis.com/v0/b/flutterapp-5c015.appspot.com/o/demo_images%2Fsimple_datatable.png?alt=media&token=a85cf0b3-a256-4100-9436-1ab2a5801789" style="width:100%" alt="Simple Datatable" />
 
 ## Usage
 
@@ -17,6 +17,8 @@ A simple HTML datatable built in pure Javascript.
 ### Basic Initialization
 
  - Give an id to your table element and add `<th>` elements as well.
+ - To enable column sorting add `sortable` class on desired `<th>` element.
+
 ```html
 <table id="myTable">
     <thead>
@@ -35,8 +37,8 @@ A simple HTML datatable built in pure Javascript.
 ```html
 <script>
     const dataList = [
-        [1, "John Doe", 'Afghanistan', "john@example.com"],
-        [2, "Jane Smith", 'Germany', "jane@example.com"],
+        [1, "John Doe", 'Afghanistan', "john@example.com", "https://i.pravatar.cc/50?img=1"],
+        [2, "Jane Smith", 'Germany', "jane@example.com", "https://i.pravatar.cc/50?img=2"],
         // Add more data as needed
     ]
 
@@ -45,7 +47,7 @@ A simple HTML datatable built in pure Javascript.
 ```
 
 
-### Enable Searching
+### Enable Searching & Customizing Columns
 
 - By default the search functionality is disabled.
 - You can pass a third optional paramater for enabling search functionality and more customization.
@@ -60,10 +62,8 @@ new simpleDataTable('myTable', dataList, {
 })
 ```
 
-
-### Custom Columns
-
 - You can add custom columns or customize each column data by overriding `onRowRender` function in options.
+- `onRowRender` has two array parameters the first one contains the data of a row and the second one contains the default rendered `<td>`s.
 
 ```html
 <table id="myTable">
@@ -83,34 +83,17 @@ new simpleDataTable('myTable', dataList, {
     searchableColumns: [1],
     title: 'Customers',
     onRowRender: function(data, column) {
-        column.push(`<td>
-                        <button onClick="alert('You clicked row id ${data[0]}')">Click</button>
-                    </td>`)
+        column[1] = `<td style="display:flex; align-items:center;">
+                         <img src="${data[4]}" style="width:30px; border-radius:50%; margin-right:5px;" /> <span>${data[1]}</span>
+                     </td>`
+        column[4] = `<td>
+                         <button onClick="alert('You clicked row id ${data[0]}')">Click</button>
+                     </td>`
         return column
     }
 })
 ```
-<img src="https://firebasestorage.googleapis.com/v0/b/flutterapp-5c015.appspot.com/o/demo_images%2Fsimple-datatable2.JPG?alt=media&token=4ce2c976-5571-45c5-b648-1896380e88b6" style="width:70%" alt="Simple Datatable 2" />
-
-- `onRowRender` has two array parameters the first one contains the data of a row and the second one contains the default rendered `<td>`s.
-```javascript
-// console.log(data)
-// [1, "John Doe", 'Afghanistan', "john@example.com"]
-
-// console.log(column)
-// ['<td>1</td>', '<td>John Doe</td>', '<td>Afghanistan</td>', '<td>john@example.com</td>']
-
-```
-
-
-### Enable Sorting
-- To enable column sorting add `sortable` class on desired `<th>` element.
-```html
-    <thead>
-        <tr>
-            <th class="sortable">Name</th>
-    ...
-```
+<img src="https://firebasestorage.googleapis.com/v0/b/flutterapp-5c015.appspot.com/o/demo_images%2Fsimple_datatable1.png?alt=media&token=91290d37-e5e0-49ab-9063-1cde53e8ffdc" style="width:80%" alt="Simple Datatable 2" />
 
 
 
