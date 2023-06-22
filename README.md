@@ -45,7 +45,7 @@ A simple HTML datatable built in pure Javascript.
     new simpleDataTable('myTable', dataList)
 </script>
 ```
-
+<br/>
 
 ### Enable Searching & Customizing Columns
 
@@ -93,7 +93,7 @@ new simpleDataTable('myTable', dataList, {
     }
 })
 ```
-<img src="https://firebasestorage.googleapis.com/v0/b/flutterapp-5c015.appspot.com/o/demo_images%2Fsimple_datatable1.png?alt=media&token=91290d37-e5e0-49ab-9063-1cde53e8ffdc" style="width:80%" alt="Simple Datatable 2" />
+<img src="https://firebasestorage.googleapis.com/v0/b/flutterapp-5c015.appspot.com/o/demo_images%2Fsimple_datatable1.png?alt=media&token=91290d37-e5e0-49ab-9063-1cde53e8ffdc" style="width:100%" alt="Simple Datatable 2" />
 
 
 
